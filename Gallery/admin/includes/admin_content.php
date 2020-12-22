@@ -10,16 +10,39 @@
 
             <?php
 
-//                $result_set = User::find_all_users();
-//                while($row = mysqli_fetch_array($result_set)) {
-//                    echo $row['username'] . "<br>";
-//                }
+//                $user = new User();
 //
-//                $found_user = User::find_user_by_id(1);
+//                $user->username = "ChiliKing";
+//                $user->password = "bullfroginlove";
+//                $user->first_name = "Kevin";
+//                $user->last_name = "Malone";
 //
-//                $user = User::instantation($found_user);
+//                $user->create();
 //
+//                $user = User::find_user_by_id(10);
+//                $user->last_name = "Schrute";
 //
+//                $user->update();
+//
+//                $user = User::find_user_by_id(13);
+//
+//                $user->delete();
+//
+//                $user = User::find_user_by_id(10);
+//                $user->last_name = "Martin";
+//
+//                $user->save();
+//
+//                $user = new User();
+//
+//                $user->username = "FrankandBeans";
+//                $user->password = "1234";
+//                $user->first_name = "Pam";
+//                $user->last_name = "Halpert";
+//
+//                $user->save();
+
+
                 echo "<h4><b>Finding All Users:</b></h4>";
                 $users = User::find_all_users();
                 foreach ($users as $user) {
@@ -39,7 +62,7 @@
                 echo "Full Name: " . $found_user->first_name . " " . $found_user->last_name  . "<br>";
                 echo "<br>";
 
-                $pictures = new Picture();
+
 
             ?>
 
