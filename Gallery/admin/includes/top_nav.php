@@ -19,7 +19,7 @@
                 <a href="#">
                     <div class="media">
                                     <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+<!--                                        <img class="media-object" src="http://placehold.it/50x50" alt="">-->
                                     </span>
                         <div class="media-body">
                             <h5 class="media-heading">
@@ -35,7 +35,7 @@
                 <a href="#">
                     <div class="media">
                                     <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+<!--                                        <img class="media-object" src="http://placehold.it/50x50" alt="">-->
                                     </span>
                         <div class="media-body">
                             <h5 class="media-heading">
@@ -51,7 +51,7 @@
                 <a href="#">
                     <div class="media">
                                     <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+<!--                                        <img class="media-object" src="http://placehold.it/50x50" alt="">-->
                                     </span>
                         <div class="media-body">
                             <h5 class="media-heading">
@@ -97,7 +97,7 @@
     </li>
     <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
-            <?php  $found_user = User::find_user_by_id(1); echo $found_user->first_name . " " . $found_user->last_name ?>
+<!--            --><?php // $found_user = User::find_user_by_id(1); echo $found_user->first_name . " " . $found_user->last_name ?>
             <b class="caret"></b></a>
         <ul class="dropdown-menu">
             <li>
