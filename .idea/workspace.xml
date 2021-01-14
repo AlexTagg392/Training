@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="18c6507e-ddb2-4ad3-a6bd-e4d005fd9f61" name="Default Changelist" comment="" />
+    <list default="true" id="d62c08f7-bc8b-49d7-aa78-6aa8b2f1ed20" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,10 +10,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectId" id="1lkrzTA964sPXWebY3qyVZPycb3" />
+  <component name="ProjectId" id="1li472ukSXBiQUXjoKEzLGPLEOd" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -22,44 +19,44 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Gallery/admin" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Training\Gallery\admin" />
+      <recent name="C:\xampp\htdocs\Training\Gallery\admin\includes" />
+      <recent name="C:\xampp\htdocs\Training\oop" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Training\Gallery\admin" />
+      <recent name="C:\xampp\htdocs\Training\Gallery\admin\includes" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="18c6507e-ddb2-4ad3-a6bd-e4d005fd9f61" name="Default Changelist" comment="" />
-      <created>1608152192493</created>
+      <changelist id="d62c08f7-bc8b-49d7-aa78-6aa8b2f1ed20" name="Default Changelist" comment="" />
+      <created>1608066406595</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1608152192493</updated>
-      <workItem from="1608152193625" duration="740000" />
+      <updated>1608066406595</updated>
+      <workItem from="1608066407806" duration="2046000" />
+      <workItem from="1608127853526" duration="8270000" />
+      <workItem from="1608147375916" duration="4026000" />
+      <workItem from="1608213279922" duration="56573000" />
+      <workItem from="1609163747535" duration="81169000" />
+      <workItem from="1609948997126" duration="1745000" />
+      <workItem from="1609952944507" duration="48637000" />
     </task>
-    <task id="LOCAL-00001" summary="Starting the gallery project">
-      <created>1608152273454</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1608152273454</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Starting the gallery project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting the gallery project" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

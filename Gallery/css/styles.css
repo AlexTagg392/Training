@@ -1,0 +1,20 @@
+.picture_homepage {
+    min-height: 250px;
+    max-height: 250px;
+}
+
+.blog_image {
+    width: 650px !important;
+    height: 500px !important;
+}
+
+/********** Home Page Pagination ***********/
+
+.pager .active a {
+    background-color: black;
+    color: white;
+}
+.pager .active a:hover {
+    background-color: black;
+    color: white;
+}
