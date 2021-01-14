@@ -7,7 +7,19 @@ if(!$session->is_signed_in()) {
 
 ?>
 <?php
-    $photos = Photo::find_all();
+    $page = !empty($_GET['page']) ? (int)$_GET['page'] : 1;
+
+    $item_per_page = 4;
+
+    $items_total = Photo::count_all();
+
+    $paginate = new Paginate($page, $item_per_page, $items_total);
+
+    $sql = "SELECT * FROM photos ";
+    $sql .= "LIMIT {$item_per_page} ";
+    $sql .= "OFFSET {$paginate->offset()}";
+    $photos = Photo::find_by_query($sql);
+//    $photos = Photo::find_all();
 
 ?>
     <!-- Navigation -->
@@ -31,22 +43,47 @@ if(!$session->is_signed_in()) {
         <div class="container-fluid">
 
             <!-- Page Heading -->
+            <div class="row pull-right">
+                <ul class="pagination">
+                    <?php
+                    if($paginate->page_total() > 1) {
+                        if($paginate->has_previous()) {
+                            echo "<li class='previous'><a class='link' href='photos.php?page={$paginate->previous()}'>Previous</a></li>";
+                        }
+
+                        for ($i=1; $i <=$paginate->page_total(); $i++) {
+                            if($i == $paginate->current_page) {
+                                echo "<li class='active'><a href='photos.php?page={$i}'>{$i}</a></li>";
+                            } else {
+                                echo "<li><a class='link' href='photos.php?page={$i}'>{$i}</a> </li>";
+                            }
+                        }
+
+                        if($paginate->has_next()) {
+                            echo "<li class='next'><a class='link' href='photos.php?page={$paginate->next()}'>Next</a></li>";
+                        }
+                    }
+                    ?>
+                </ul>
+            </div>
+
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">
                         Photos
-                        <small>Subheading</small>
                     </h1>
-                   
+
                     <div class="col-md-12">
                         <table class="table table-hover">
                             <thead>
                                 <tr>
                                     <th>Photo</th>
                                     <th>ID</th>
-                                    <th>File Name</th>
                                     <th>Title</th>
+                                    <th>Caption</th>
+                                    <th>File Name</th>
                                     <th>Size</th>
+                                    <th>Comments</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -54,28 +91,29 @@ if(!$session->is_signed_in()) {
                                     foreach ($photos as $photo) : ?>
                                 <tr>
 
-                                    <td><img src="<?php echo $photo->picture_path(); ?>" alt="<?php echo $photo->filename; ?>">
-                                        <div class="picture_link">
+                                    <td><img class="admin-photo-thumbnail" src="<?php echo $photo->picture_path(); ?>" alt="<?php echo $photo->filename; ?>">
+                                        <div class="action_link">
                                             <a href="delete_photo.php?id=<?php echo $photo->id; ?>">Delete</a>
                                             <a href="edit_photo.php?id=<?php echo $photo->id; ?>">Edit</a>
-                                            <a href="#">View</a>
+                                            <a href="../photo.php?id=<?php echo $photo->id; ?>">View</a>
                                         </div>
                                     </td>
                                     <td><?php echo $photo->id; ?></td>
-                                    <td><?php echo $photo->filename; ?></td>
                                     <td><?php echo $photo->title; ?></td>
+                                    <td><?php echo $photo->caption; ?></td>
+                                    <td><?php echo $photo->filename; ?></td>
                                     <td><?php echo $photo->size; ?></td>
-
+                                    <td><a href="comment_photo.php?id=<?php echo $photo->id; ?>">See All</a>
+                                        <b>(<?php $comments = Comment::find_comments($photo->id);
+                                            echo count($comments);
+                                            ?>)
+                                        </b>
+                                    </td>
                                 </tr>
                                <?php endforeach; ?>
                             </tbody>
                         </table>
-                        
-                        
-                        
                     </div>
-                    
-                    
                 </div>
             </div>
             <!-- /.row -->
