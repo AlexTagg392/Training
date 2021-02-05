@@ -1,10 +1,7 @@
 <?php
 
 include('includes/header.php');
-
 include('includes/dashboard.php');
-
-include('includes/config.php');
 
 ?>
 
@@ -12,16 +9,12 @@ include('includes/config.php');
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">Adding User</h1>
-                    
-                 <?php display_msg() ?>
-                 
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             <div class="row">
-            
-               
+             
                 <div class="col-md-10 col-md-offset-1 ">
                 <div class="row">
                   <div class="col-sm-6 col-sm-offset-3">
@@ -42,20 +35,6 @@ include('includes/config.php');
                                  </select>
                               </div>
                         </div>
-                         
-                         <div class="form-group">
-                          <label class="" for="email">email</label>
-                          <div class="">
-                            <input type="email" class="form-control" name="email" placeholder="Enter Email" value="">
-                          </div>
-                        </div>
-                         
-                         <div class="form-group">
-                          <label class="" for="password">Password</label>
-                          <div class="">
-                            <input type="password" class="form-control" name="password" placeholder="Enter Password" value="">
-                          </div>
-                        </div>
 
                          <div class="form-group">
                           <label class="" for="name">Full Name</label>
@@ -71,9 +50,9 @@ include('includes/config.php');
                         </div>
 
                          <div class="form-group">
-                          <label class="" for="country">Location</label>
+                          <label class="" for="country">Country</label>
                           <div class="">
-                            <input type="text" class="form-control" name="location" placeholder="Enter Location" value="">
+                            <input type="text" class="form-control" name="country" placeholder="Enter Country" value="">
                           </div>
                         </div>
                          <div class="form-group">
@@ -85,100 +64,12 @@ include('includes/config.php');
 
                         <div class="form-group">
                           <div class="">
-                            <button type="submit" class="btn btn-primary" name="register_admin">Create Admin</button><hr>
+                            <button type="submit" class="btn btn-primary" name="update_profile">Create Admin</button><hr>
                           </div>
                         </div>
 
 
                         </form>
-                            
-                            
-    <?php
-                      
-        if(isset($_POST['register_admin'])){
-        
-        $raw_name               =   clean($_POST['fullname']);
-        $raw_location           =   clean($_POST['location']); 
-        $raw_designation        =   clean($_POST['designation']);
-        $raw_responsibility     =   clean($_POST['responsibility']);
-        $raw_email              =   clean($_POST['email']);
-        $raw_password           =   clean($_POST['password']);
-        
-        
-        $cl_name                =   santize($raw_name);
-        $cl_email               =   val_email($raw_email);
-        $cl_password            =   santize($raw_password);
-        $cl_location            =   santize($raw_location);
-        $cl_designation         =   santize($raw_designation);
-        $cl_responsibility      =   santize($raw_responsibility);
-        $cl_priv                =   clean($_POST['privilege']);
-        
-        
-        //Hashed Password
-        $hashed_password        = hash_pwd($cl_password);
-        
-         
-                
-        //Instatiating our object from the dbase class
-        $db = new dbase;
-
-        $db->query('SELECT * FROM admin WHERE email = :email');
-
-        $db->bind(':email', $cl_email , PDO::PARAM_STR);
-
-        $get_user = $db->fetchSingle();
-
-        if($get_user > 0){
-
-            set_msg('<div class="alert alert-danger text-center">
-                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                  <strong></strong> The Admin User Already Exist.
-                </div>');
-
-            }else{
-                
-                $db->query('INSERT INTO admin(id, fullname, email, password, privilege, designation, responsibility, location) VALUES(NULL, :fullname, :email, :password, :privilege, :designation, :responsibility, :location) ');
-                
-                $db->bind(':fullname', $cl_name , PDO::PARAM_STR);
-                $db->bind(':password', $hashed_password , PDO::PARAM_STR);
-                $db->bind(':email', $cl_email, PDO::PARAM_INT);
-                $db->bind(':privilege', $cl_priv, PDO::PARAM_INT);
-                $db->bind(':designation', $cl_designation , PDO::PARAM_STR);
-                $db->bind(':responsibility', $cl_responsibility , PDO::PARAM_STR);
-                $db->bind(':location', $cl_location , PDO::PARAM_STR);
-                
-                $run = $db->execute();
-                
-                if($run){
-                    
-                    redirect('adduser.php');
-                    
-                    set_msg('<div class="alert alert-success text-center">
-                      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                      <strong>Success!</strong> Admin User has been Added
-                    </div>');
-                    
-                }else{
-                    
-                    echo '<div class="alert alert-danger text-center">
-                      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                      <strong>Sorry!</strong> Admin User could not be Added.
-                    </div>';
-                    
-                }
-                
-                
-           
-            
-            
-        }
-            
-        
-        
-    }
-                      
-                      
-                ?>
 
                             <br />
 

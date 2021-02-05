@@ -30,7 +30,7 @@
 
         <!-- Custom Fonts -->
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
         
 
@@ -64,33 +64,32 @@
                 <ul class="nav navbar-nav navbar-left">
                     <li><a href=""></a></li>
                 </ul>
-           <?php
-              
-                if(isset($_SESSION['user_logged_in'])){ 
-                    
+            <?php
+                if(isset($_SESSION['user_logged_in'])) {
                     $fullname = $_SESSION['user_data']['fullname'];
-                    $image = $_SESSION['user_data']['image'];
-                
-                ?>
-             
+
+                    ?>
+
+               
                 <ul class="nav navbar-nav navbar-right">
-                 <li class="navbar-text">Welcome <?php echo $fullname ?> </li>
+                 <li class="navbar-text">Welcome <?php echo $fullname; ?> </li>
                   <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                       <?php echo $image; ?>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"></b>
+                        <?php echo $_SESSION['user_data']['image']; ?>
+
                         </a>
                                 <ul class="dropdown-menu">
                                     <li><a href="user-account.php"><i class="fa fa-dashboard"></i> Account</a></li>
                                     <li class="divider"></li>
-                                     <li><a data-toggle="modal" data-target="#settings<?php echo $_SESSION['user_data']['id'] ?>"><i class="fa fa-cog"></i> Settings</a></li>
+                                     <li><a data-toggle="modal" data-target="#settings"><i class="fa fa-cog"></i> Settings</a></li>
                                     <li class="divider"></li>
                                     <li><a href="logout.php"><i class="fa fa-sign-out"></i> Sign-out</a></li>
                                 </ul>
                 </li>
                   
                 </ul>
-       
-             <?php } ; ?>
+            <?php }; ?>
+     
 
             </div>
 
@@ -101,7 +100,7 @@
     <div class="container-fluid">
     
     <!-- Modal -->
-                    <div id="settings<?php echo $_SESSION['user_data']['id'] ?>" class="modal fade" role="dialog">
+                    <div id="settings" class="modal fade" role="dialog">
                       <div class="modal-dialog">
 
                         <!-- Modal content-->
@@ -109,33 +108,32 @@
                         
                           <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Account Settings </h4>
-                            <h4 class="modal-title" style="color: red">* Note that only Admin can undo changes </h5>
+                            <h4 class="modal-title">Settings</h4>
                           </div>
                           <div class="modal-body">
                         
-                            <form class="" role="form" method="post" action="user-account.php">
+                            <form class="" role="form" method="post" action="">
 
                               <div class="form-group">
-                                    <label class="checkbox-inline"><span class="required"></span><input type="checkbox" value="2" name="no_cert">Do not Show My Certification</label>
+                                    <label class="checkbox-inline"><span class="required"></span><input type="checkbox" value="2" name="notify">Do not Show My Certification</label>
                                 </div>
                                  <div class="form-group">
-                                    <label class="checkbox-inline"><span class="required"></span><input type="checkbox" value="2" name="no_mem_status">Do not Show My Membership Status </label>
+                                    <label class="checkbox-inline"><span class="required"></span><input type="checkbox" value="2" name="notify">Do not Show My Membership Status </label>
                                 </div>
                                 <div class="form-group">
-                                    <label class="checkbox-inline"><span class="required"></span><input type="checkbox" value="2" name="no_mem_reason">Do not Show My Membership Reason</label>
+                                    <label class="checkbox-inline"><span class="required"></span><input type="checkbox" value="2" name="notify">Do not Show My Membership Reason</label>
                                 </div>
                                 
 
                                 <div class="form-group">
                                     
-                                    <button type="submit" id="contact_form_submit" name="update_settings" class="btn btn-default">Submit</button>
+                                    <button type="submit" id="contact_form_submit" name="msg_admin" class="btn btn-default">Submit</button>
                                 </div>
                             </form>
                         
                           </div>
                           <div class="modal-footer">
-                            <a href="deleteprofile.php" class="btn btn-danger">Delete Account</a>
+                            <button type="button" id="delete" class="btn btn-danger">Delete Account</button>
                             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                           </div>
                         </div>
@@ -143,17 +141,5 @@
 
                       </div>
                     </div>
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        
     

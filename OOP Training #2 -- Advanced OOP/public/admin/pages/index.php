@@ -2,18 +2,13 @@
 
 include('includes/header.php');
 
+
+?>
+        
+
+<?php
+
 include('includes/dashboard.php');
-
-include('includes/config.php');
-
-if(isset($_SESSION['admin_logged_in'])){
-    
-    
-}else{
-    
-    redirect('logout.php');
-}
-
 
 ?>
            
@@ -35,18 +30,10 @@ if(isset($_SESSION['admin_logged_in'])){
                                     <i class="fa fa-envelope fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                               <?php
-                                  
-                                    $db = new dbase;
-                                    
-                                    $db->query('SELECT COUNT(*) FROM saved_orders');
-                                    
-                                    $total_saved_orders =   $db->fetchColumn();
-                                    
-                                    
-                                ?>    
-                                    <div class="huge"><?php echo $total_saved_orders ?></div>
-                                    <div>Total Saved Orders</div>
+                                   
+                                   
+                                    <div class="huge">Total</div>
+                                    <div>Total Order Saved</div>
                                 </div>
                             </div>
                         </div>
@@ -67,18 +54,10 @@ if(isset($_SESSION['admin_logged_in'])){
                                     <i class="fa fa-group fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                <?php
-                                  
-                                    
-                                    $db->query('SELECT COUNT(*) FROM users');
-                                    
-                                    $total_members  =   $db->fetchColumn();
-                                    
-                                    
-                                ?>  
                                    
-                                    <div class="huge"><?php echo $total_members ?></div>
-                                    <div>Total Members </div>
+                                   
+                                    <div class="huge">Total</div>
+                                    <div>Total Members</div>
                                 </div>
                             </div>
                         </div>
@@ -99,17 +78,9 @@ if(isset($_SESSION['admin_logged_in'])){
                                     <i class="fa fa-user fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                <?php
-    
-                                    $db->query('SELECT COUNT(*) FROM users WHERE membership > 0');
-                                        
-                                  
-                                    $total_premium_members  =   $db->fetchColumn();
-                                    
-                                    
-                                ?>  
-                                    <div class="huge"><?php echo $total_premium_members ?></div>
-                                    <div>Total Premium Members</div>
+                                   
+                                    <div class="huge">Total</div>
+                                    <div>Total Premium Users</div>
                                 </div>
                             </div>
                         </div>
@@ -130,15 +101,9 @@ if(isset($_SESSION['admin_logged_in'])){
                                     <i class="fa fa-money fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                <?php
-    
-                                    $db->query('SELECT SUM(amt) FROM orders');
-                                       
-                                    $total_amount  =   $db->fetchColumn();
-                                 
-                                ?>  
+                                  
                                    
-                                    <div class="huge">$ <?php echo $total_amount ?></div>
+                                    <div class="huge">$ Amount</div>
                                     <div>Total Earned</div>
                                 </div>
                             </div>
@@ -225,24 +190,12 @@ if(isset($_SESSION['admin_logged_in'])){
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                <?php
-    
-                                    $db->query('SELECT * FROM orders ORDER BY date DESC');
-                                       
-                                    $recent_orders  =   $db->fetchMultiple();
-                                 
-                                ?>        
-                                              
-                                        <?php foreach($recent_orders as $order){ ?>       
-                                               
                                                 <tr>
-                                                    <td><?php echo $order['id'] ?> </td>
-                                                    <td><?php echo $order['date'] ?> </td>
-                                                    <td>$ <?php echo $order['amt'] ?> </td>
+                                       
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>$ </td>
                                                 </tr>
-                                                
-                                        <?php } ?>           
-                                                    
                                             </tbody>
                                             
                                 

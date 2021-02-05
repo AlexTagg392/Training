@@ -12,18 +12,9 @@
                             </div>
                             <!-- /input-group -->
                         </li>
-                        <?php 
-                        
-                            if(isset($_SESSION['admin_logged_in'])){
-                                
-                                echo '<li>
-                                    <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                                </li>';
-                            }
-                              
-                        ?>
-                        
-                        
+                        <li>
+                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
                          <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -47,15 +38,10 @@
                                 <!-- <li>
                                     <a href="flot.php">Flot Charts</a>
                                 </li>-->
-                            <?php 
-                                if(isset($_SESSION['admin_logged_in'])){
 
-                                    echo '<li>
-                                        <a href="adduser.php">Add Admin User</a>
-                                    </li>';
-                                }
-                              
-                            ?>
+                                <li>
+                                    <a href="adduser.php">Add Admin User</a>
+                                </li>
                                 <li>
                                     <a href="addproduct.php">Add Product</a>
                                 </li>
