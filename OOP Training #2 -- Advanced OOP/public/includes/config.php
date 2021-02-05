@@ -1,6 +1,7 @@
-<?php 
-include('includes/functions.php'); 
-include('includes/pdo.php'); 
-include('includes/phpmailer.php'); 
-
+<?php
+//    include 'header.php';
+    include 'functions.php';
+    include 'pdo.php';
+    include 'phpmailer.php';
+//    include 'footer.php';
 ?>

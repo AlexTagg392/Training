@@ -2,7 +2,7 @@
 
         <footer class="text-center" style="color:#777;">
             <hr>
-            <small>Contact Developer <a href="http://paulamissah.xyz" target="_blank"> Paul Amissah </a> Business Bay | Dubai </small>
+            <small>Coded by <a href="" target="_blank">Your Name Here</a>Maybe Your Address</small>
         </footer><br><br>
         
         <!-- jQuery -->

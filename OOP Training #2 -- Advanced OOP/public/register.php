@@ -1,24 +1,21 @@
 <?php 
-include('includes/header.php'); 
-include('includes/config.php');
+    include('includes/header.php');
+    include('includes/config.php');
 
-if(isset($_SESSION['user_logged_in'])){ 
+    if(isset($_SESSION['user_logged_in'])) {
 
-    redirect('user-account.php'); 
+        redirect('user-account.php');
 
-}else{
-    
-    //Do nothing
-    
-}
+    } else {
+        redirect('logout.php');
 
-
+    }
 ?>
 
-  
+
     <div class="row">
       <div class="col-md-4 col-md-offset-4">
-         <?php display_msg(); ?>
+          <?php display_msg(); ?>
           <p class=""><a class="pull-right" href="../index.php"> Login</a></p><br>
       </div>
       <div class="col-md-4 col-md-offset-4">
@@ -75,16 +72,6 @@ if(isset($_SESSION['user_logged_in'])){
             </div>
           </div>
 </form>
-         
-         <?php
-          
-//          if(isset($_POST['submit_registration'])){
-//              
-//              process_registration(); 
-//          }
-          
-          ?>
-         
           
   </div>
 </div>

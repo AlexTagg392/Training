@@ -2,59 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d62c08f7-bc8b-49d7-aa78-6aa8b2f1ed20" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basic Files/extras.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/add_user.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/comment_photo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/delete_comment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/delete_comment_photo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/delete_photo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/delete_user.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/edit_photo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/edit_user.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/images/AndyBernard.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/images/Angela_Martin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/images/Creed.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/images/Darryl.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/images/Dwight_Schrute.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/images/Kelly_Kapoor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/images/Kevin.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/images/Meredith.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/images/MichaelScott.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/images/Oscar_Martinez.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/images/Pam_Beesley.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/images/Phyllis_Vance.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/images/RyanHoward.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/images/Stanley_Hudson.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/images/TobyFlenderson.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/includes/ajax_code.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/includes/comment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/includes/db_object.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/includes/paginate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/includes/photo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/includes/photo_library_modal.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/admin/js/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gallery/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gallery/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Gallery/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gallery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Gallery/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gallery/admin/comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/Gallery/admin/comments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gallery/admin/includes/admin_content.php" beforeDir="false" afterPath="$PROJECT_DIR$/Gallery/admin/includes/admin_content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gallery/admin/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Gallery/admin/includes/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gallery/admin/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Gallery/admin/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gallery/admin/includes/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/Gallery/admin/includes/init.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gallery/admin/includes/new_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/Gallery/admin/includes/new_config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gallery/admin/includes/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/Gallery/admin/includes/session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gallery/admin/includes/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/Gallery/admin/includes/user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gallery/admin/photos.php" beforeDir="false" afterPath="$PROJECT_DIR$/Gallery/admin/photos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gallery/admin/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/Gallery/admin/upload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gallery/admin/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/Gallery/admin/users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gallery/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Gallery/includes/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gallery/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Gallery/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gallery/includes/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/Gallery/includes/navigation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gallery/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Gallery/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gallery/photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/Gallery/photo.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +13,11 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/finished_Photo_Gallery" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1li472ukSXBiQUXjoKEzLGPLEOd" />
@@ -76,7 +29,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Gallery/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../xampp/htdocs/Training" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -106,6 +59,7 @@
       <workItem from="1609163747535" duration="81169000" />
       <workItem from="1609948997126" duration="1745000" />
       <workItem from="1609952944507" duration="48637000" />
+      <workItem from="1611072961065" duration="1175000" />
     </task>
     <task id="LOCAL-00001" summary="Finished the php aspect of this Photo Gallery">
       <created>1610641517728</created>
@@ -114,7 +68,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610641517728</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Starting Advance OOP PHP course">
+      <created>1610641971702</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610641971702</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,7 +95,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finished the php aspect of this Photo Gallery" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished the php aspect of this Photo Gallery" />
+    <MESSAGE value="Starting Advance OOP PHP course" />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting Advance OOP PHP course" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

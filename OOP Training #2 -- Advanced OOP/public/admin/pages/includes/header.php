@@ -77,20 +77,9 @@ session_start();
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                       <?php
-                        
-                        if(isset($_SESSION['admin_logged_in'])){
-                       
-                        echo '<li><a href="#"><i class="fa fa-user fa-fw"></i>' . $_SESSION['admin_data']['fullname'] . '</a>
-                        </li>';
-                            
-                        }elseif(isset($_SESSION['emp_logged_in'])){
-                            
-                            echo '<li><a href="#"><i class="fa fa-user fa-fw"></i>' . $_SESSION['emp_data']['fullname'] . '</a>
-                        </li>';
-                            
-                        }
-                        ?>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> Fullname</a>
+                        </li>
+
                         <li class="divider"></li>
                         <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>

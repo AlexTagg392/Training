@@ -1,15 +1,16 @@
-<?php
+<?php include("login.php");
 
-session_start();
-
-unset($_SESSION['admin_logged_in']);
-
-unset($_SESSION['emp_logged_in']);
 
 session_destroy();
+
+if(isset($_COOKIE['email'])) {
+    
+    unset($_COOKIE['email']);
+    
+}
 
 
 header("Location: login.php");
 
 
-?>
+

@@ -3,21 +3,6 @@ ob_start();
 
 session_start();
 
-include('includes/config.php');
-
-
-if(isset($_SESSION['admin_logged_in']) || (isset($_SESSION['emp_logged_in']) )){
-    
-    redirect('tables.php');
-    
-}else{
-    
-    //Do Nothing
-    
-}
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -62,10 +47,9 @@ if(isset($_SESSION['admin_logged_in']) || (isset($_SESSION['emp_logged_in']) )){
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">Login</h3>
-                        <?php display_msg() ; ?>
                     </div>
                     <div class="panel-body">
-                        <form role="form" action="<?php login_admin() ?>" method="post">
+                        <form role="form" action="login.php" method="post">
                             <fieldset>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
@@ -81,7 +65,7 @@ if(isset($_SESSION['admin_logged_in']) || (isset($_SESSION['emp_logged_in']) )){
                                 </div>
 -->
                                 <!-- Change this to a button or input when using this as a form -->
-                                <button name="login_admin" class="btn btn-lg btn-success btn-block">Login</button>
+                                <button name="login" class="btn btn-lg btn-success btn-block">Login</button>
                             </fieldset>
                         </form>
                     </div>

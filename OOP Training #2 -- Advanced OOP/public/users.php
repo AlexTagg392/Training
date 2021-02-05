@@ -1,91 +1,45 @@
-<?php include ('includes/header.php'); 
+<?php include ('includes/header.php');
 
-include("includes/config.php");
-
-
-if($_SESSION['emp_logged_in'] = true){
-    
-    //Do Nothing
-}else{
-    
-    redirect('logout');
-}
-
+  include 'includes/functions.php';
 ?>
   
 
 <script>
-    
-$(document).ready(function(){
-    
-    $('#search').keyup(function(){
-        
-        var searchInput =$('#search').val();
-        var location    =$('#location').val();
-        var reason      =$('#reason').val(); 
-        
-        $.ajax({
-            url:'search.php',
-            data:{getInput:searchInput, getlocation:location, getreason:reason},
-            type:'POST',
-            success:function(result){
-                
-                if(!result.error){
-                    
-                    $('#result').html(result);
-                }
-                
-            }
-            
-        });
-        
-        
-    });
-    
-});
-    
+
+
+
 </script>
 
 <div class="container">
     
        
-              <h4 class="">Refine Search <a href="admin/pages/tables.php" class="btn btn-default pull-right">Back To Admin</a></h4> <br> 
+              <h4 class="">Refine Search <a href="admin/pages/index.php" class="btn btn-default pull-right">Back To Account</a></h4> <br> 
                  <div style="padding: 20px; border: 1px solid #ddd; background-color: #fff;">
                     
                     <div class="row">
                       
                         <div class="col-md-3">
-                           <p>Select Location</p>
+                           <p>Select Country</p>
                             <div class="form-group">
                               
-                              <select class="form-control" id="location">
-                                <option>Toggle Location</option>
-                                 <?php
-                                  
-                                    $db = new dbase;
-                                  
-                                    $db->query('SELECT * FROM users');
-                                       
-                                    $users  =   $db->fetchMultiple();
-                                  
-                                  ?>
-                                <?php foreach($users as $user){ ?>
-                                <option><?php echo $user['location'] ?> </option>
-                                <?php } ?> 
+                              <select class="form-control" id="country">
+                             
+                               
+                                <option>Select Country</option>
+                              
                               </select>
                             
                             </div>
                         </div>
                          <div class="col-md-3">
-                           <p>Select Reason</p>
+                           <p>Select Membership</p>
                             <div class="form-group">
                               
-                              <select class="form-control" id="reason">
-                                <option value="">Togle Reason</option>
-                                <option value="Personal">Personal</option>
-                                <option value="Family">Family</option>
-                                <option value="Friend">Friend</option>
-                                <option value="Contract">Contract</option>
+                              <select class="form-control" id="member">
+                             
+                               
+                                <option>Select Membersip</option>
+                              
                               </select>
                             
                             </div>
@@ -96,10 +50,9 @@ $(document).ready(function(){
                          </div>
                          
                           <br><br><br>
-                             
+                             <p class="text-center" style="color: blue;">Error Messages Here</p>
                           <div id="result">
                           
-                                 
                                   
                           </div>
                     </div>
@@ -127,23 +80,15 @@ $(document).ready(function(){
                                         <td class="text-center"><strong>Profile</strong></td>
                                         </tr>
                                  
-                                       <?php 
-                                            $db->query('SELECT * FROM users ORDER BY date DESC LIMIT 10');
-                                       
-                                            $results = $db->fetchMultiple();
-                                       
-                                       ?>
-                                       
-                                       <?php foreach($results as $user){ ?>
                                         <tr>
-                                        <td class="text-center"><br><?php echo $user['fullname'] ?> </td>
-                                        <td class="text-center"><br><?php echo $user['email'] ?></td>
-                                        <td class="text-center"><br><?php echo $user['location'] ?></td>
-                                        <td class="text-center"><img src="uploaded_image/<?php echo $user['image'] ?>" class="img-rounded" alt="Image" width="50" height="60"></td>
-                                        <td class="text-center"><br><?php echo $user['profession'] ?></td>
-                                        <td class="text-center"><br><a href="user.php?user_id=<?php echo $user['id'] ?>">View Profile</a></td>
+                                        <td class="text-center"><br></td>
+                                        <td class="text-center"><br></td>
+                                        <td class="text-center"><br></td>
+                                        <td class="text-center"><img src="" class="img-rounded" alt="Image" width="50" height="60"></td>
+                                        <td class="text-center"><br></td>
+                                        <td class="text-center"><br><a href="user.php">View Profile</a></td>
                                         </tr>
-                                      <?php } ?>
+                                  
                                     </table>
                                 
                             </div>
@@ -151,16 +96,11 @@ $(document).ready(function(){
                             </div>
 
                         </div>
-                        
-                        
-                        
                     <!--<div"> container disabled-->
                 </section>
-                
-        
   
 </div>
 
 
 
-<?php //include ('includes/footer.php'); ?>
+<?php include ('includes/footer.php'); ?>
